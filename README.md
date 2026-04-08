@@ -21,11 +21,8 @@ A front-end web application that pulls live data from the [Swapi.Tech](https://s
 | File             | Purpose                                 |
 |------------------|-----------------------------------------|
 | `index.html`     | Page structure and markup.              |
-|------------------|-----------------------------------------|
 | `style.css`      | All styling (CSS variables, animations) |
-|------------------|-----------------------------------------|
 | `script.js`      | API fetching, rendering, event handling |
-|------------------|-----------------------------------------|
 
 ---
 
@@ -95,11 +92,8 @@ No API key is needed. All requests are made with the browser's built-in `fetch()
 | Section     | Endpoint  | Details fetched                            |
 |-------------|-----------|--------------------------------------------|
 | Films       | `/films`  | Title, episode, director, crawl, cast      |
-|-------------|-----------|--------------------------------------------|
 | Characters  | `/people` | Name, gender, birth year, homeworld        |
-|-------------|-----------|--------------------------------------------|
 | Planets     | `/planets`| Name, climate, terrain, population         |
-|-------------|-----------|--------------------------------------------|
 
 Related resources (e.g., a character's homeworld) are fetched on demand when the detail panel is opened &mdash; keeping the initial load fast.
 
