@@ -1,4 +1,4 @@
-# 🪐 Holocron API
+# 🪐 Holocron API 🛸
 
 A front-end web application that pulls live data from the [Swapi.Tech](https://swapi.tech) public Star Wars API and displays it in a polished, interactive UI. Built as a pre-work assignment for Code the Dream's Advanced Web Development program.
 
