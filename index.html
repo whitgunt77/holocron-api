@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holocron API</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- HEADER / NAV -->
+     <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text"><em>HOLOCRON API</em></span>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-btn active" data-section="films">Films</button>
+                <button class="nav-btn" data-section="characters">Characters</button>
+                <button class="nav-btn" data-section="planets">Planets</button>
+            </nav>
+        </div>
+     </header>
+
+     <!-- HERO BANNER -->
+     <section class="hero">
+        <div class="stars" id="stars"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                A Long Time Ago<br />
+                <span>In a Galaxy Far Away...</span>
+            </h1>
+            <p class="hero-sub">
+                Explore the universe of Star Wars &mdash; films, characters, and planets await.
+            </p>
+        </div>
+     </section>
+
+     <!-- MAIN CONTENT AREA -->
+     <main class="main-content">
+        <!-- SEARCH BAR -->
+         <div class="search-bar-wrapper">
+            <div class="search-bar">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search films, characters, or planets..."
+                />
+                <button id="searchBtn">Search</button>
+                <button id="clearBtn" class="clear-btn">✕</button>
+            </div>
+            <p id="searchError" class="search-error" aria-live="polite"></p>
+         </div>
+
+         <!-- SECTION TITLE -->
+          <div class="section-header">
+            <h2 id="sectionTitle">Films</h2>
+            <p id="sectionSubtitle">All Star Wars saga films from the API</p>
+          </div>
+
+          <!-- LOADING SPINNER -->
+          <div id="loadingSpinner" class="loading-spinner" aria-label="Loading">
+            <div class="spinner-ring"></div>
+            <p>Connecting to the Force...</p>
+          </div>
+
+          <!-- ERROR MESSAGE -->
+          <div id="errorMessage" class="error-message" role="alert" style="display:none;">
+            <p>⚠️ Something went wrong. Please try again later.</p>
+            <button id="retryBtn">Retry</button>
+          </div>
+
+          <!-- CARDS GRID -->
+          <div id="cardsGrid" class="cards-grid"></div>
+
+          <!-- DETAIL PANEL (overlay) -->
+          <div id="detailOverlay" class="detail-overlay" role="dialog" aria-modal="true" style="display:none;">
+            <div class="detail-panel">
+                <button class="detail-close" id="detailClose" aria-label="Close detail">✕</button>
+                <div id="detailContent"></div>
+            </div>
+          </div>
+
+     </main>
+
+     <footer class="site-footer">
+        <p>Data provided by <a href="https://swapi.tech" target="_blank" rel="noopener">Swapi.Tech</a> · Star Wars &copy; Lucasfilm Ltd.</p>
+     </footer>
+
+     <script src="script.js"></script>
+</body>
+</html>
